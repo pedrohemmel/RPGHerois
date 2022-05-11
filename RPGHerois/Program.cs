@@ -8,7 +8,6 @@ namespace RPGHerois
         {
             Guerreiro pedro = new Guerreiro("Pedro Arcaidas");
             Arqueiro wellinston = new Arqueiro("Wellinston Ferreiro");
-            Guerreiro fabricio = new Guerreiro("Fabrício Ferraz");
 
             pedro.mostraQuemFala();
             Console.WriteLine("Hoje estamos trilhando o caminho das neblinas em meio a guerra, a estraté... MEU DEUS! Estamos sendo atacados!!\n");
@@ -33,9 +32,14 @@ namespace RPGHerois
 
             Console.WriteLine("\n");
 
-            fabricio.mostraQuemFala();
-            fabricio.setAtacarBehavior(new AtacarNaoAtaca());
-            fabricio.executaAtacar();
+            pedro.mostraQuemFala();
+            pedro.setAtacarBehavior(new AtacarNaoAtaca());
+            pedro.executaAtacar();
+
+            Console.WriteLine("\n");
+
+            wellinston.mostraQuemFala();
+            wellinston.executaAtacarCArmaSecundaria();
 
             Console.WriteLine("\n");
 
